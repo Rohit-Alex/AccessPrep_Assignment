@@ -2,10 +2,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding-left: 20px;
+  width: 92%;
   padding-bottom: 20px;
   transition: transform 450ms;
+  padding: 20px 40px 20px 20px;
+}
+@media screen and (max-width: 467px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .imgCont {
   display: flex;
@@ -16,8 +23,10 @@
   justify-content: center;
   margin-left: 20px;
 }
-.img {
-  border-radius: 40px;
+.image {
+  border-radius: 22px;
+  height: 210px;
+  width: 10vw;
 }
 
 .mid {
@@ -30,4 +39,7 @@
 }
 .container:hover {
   transform: scale(1.02);
+}
+.last {
+  margin-right: 20px;
 }

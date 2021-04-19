@@ -5,15 +5,14 @@
   justify-content: space-between;
   align-content: center;
   padding-top: 12px;
-  background-color: #5d001e;
+  background-color: #b22453;
   position: fixed;
   z-index: 1;
-
   transition-timing-function: ease-in;
   transition: all 0.5s;
 }
 .dark {
-  background-color: #3aafa9;
+  background-color: #f682a9;
 }
 .toogle {
   display: flex;
@@ -41,8 +40,10 @@
   border: 2px solid white;
   height: 70%;
   color: #e3afbc;
+  margin-right: 33px;
   border-radius: 20px;
 }
+
 .nav_right input {
   width: 80%;
   height: 70%;

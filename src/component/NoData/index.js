@@ -1,4 +1,6 @@
 import React from "react";
+import Loader from "react-loader-spinner";
+
 import "./style.css";
 const NoData = () => {
   return (
@@ -7,6 +9,7 @@ const NoData = () => {
         Oops...No Books found <span>🙏</span>
       </h4>
       <h6 style={{ color: "#1b105f" }}>Search another book</h6>
+      <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
     </div>
   );
 };
