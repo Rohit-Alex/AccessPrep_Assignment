@@ -28,11 +28,11 @@
   display: none;
 }
 .body {
-  padding-top: 12vh;
   height: 100%;
 }
 .book_name {
   flex: 0.4;
+  padding-left: 30px;
   flex-shrink: 1;
 }
 .genre {
