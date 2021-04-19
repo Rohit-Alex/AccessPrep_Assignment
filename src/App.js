@@ -147,10 +147,10 @@ function App() {
                 <h1>Book Details...</h1>
               </div>
               <div className="sub_head">
-                <h2 className="book_name">Books Title & Author</h2>
-                <h2 className="genre">Genre</h2>
-                <h2 className="reading_progress">Reading Progress</h2>
-                <h2 className="last_opened">Last Opened</h2>
+                <h4 className="book_name">Books Title & Author</h4>
+                <h4 className="genre">Genre</h4>
+                <h4 className="reading_progress">Reading Progress</h4>
+                <h4 className="last_opened">Last Opened</h4>
               </div>
               <hr />
               {filteredArray.length > 0 ? (
@@ -197,8 +197,8 @@ function App() {
             overlay: {},
             content: {
               position: "absolute",
-              top: 150,
-              left: 400,
+              top: 200,
+              left: 300,
               height: 400,
               width: 600,
               backgroundColor: "rgb(205 154 171)",

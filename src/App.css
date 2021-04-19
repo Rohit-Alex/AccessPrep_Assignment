@@ -9,7 +9,6 @@
 .App_Dark {
   color: rgb(252, 249, 249);
   background-color: rgb(5, 5, 5);
-  /* height: 100vh; */
 }
 .head_grid {
   height: 9vh;
@@ -42,20 +41,24 @@
 }
 .book_name {
   flex: 0.4;
+  flex-shrink: 1;
 }
 .genre {
   flex: 0.2;
   padding-right: 8vw;
+  flex-shrink: 1;
 }
 
 .reading_progress {
   flex: 0.2;
+  flex-shrink: 1;
 }
 
 .last_opened {
   flex: 0.2;
   display: flex;
   justify-content: flex-end;
+  flex-shrink: 1;
 }
 
 .head {
@@ -64,13 +67,13 @@
   place-items: center;
   border-bottom: 2px solid #d1b1d4;
 }
-@media screen and (max-width: 467px) {
+/* @media screen and (max-width: 467px) {
   .sub_head {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-}
+} */
 .modal_cont {
   display: flex;
   flex-direction: column;
