@@ -30,28 +30,7 @@
 .body {
   height: 100%;
 }
-.book_name {
-  flex: 0.4;
-  padding-left: 30px;
-  flex-shrink: 1;
-}
-.genre {
-  flex: 0.2;
-  padding-right: 8vw;
-  flex-shrink: 1;
-}
 
-.reading_progress {
-  flex: 0.2;
-  flex-shrink: 1;
-}
-
-.last_opened {
-  flex: 0.2;
-  display: flex;
-  justify-content: flex-end;
-  flex-shrink: 1;
-}
 .head {
   height: 9vh;
   padding-top: 12vh;
