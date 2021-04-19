@@ -8,7 +8,7 @@ const NoData = () => {
       <h4 style={{ color: "#cc406d" }}>
         Oops...No Books found <span>🙏</span>
       </h4>
-      <h6 style={{ color: "#1b105f" }}>Search another book</h6>
+      <h6 style={{ color: "rgb(185 88 194)" }}>Search another book</h6>
       <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
     </div>
   );
