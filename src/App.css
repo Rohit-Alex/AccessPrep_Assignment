@@ -9,6 +9,7 @@
 .App_Dark {
   color: rgb(252, 249, 249);
   background-color: rgb(5, 5, 5);
+  /* height: 100vh; */
 }
 .head_grid {
   height: 9vh;
@@ -19,9 +20,7 @@
 }
 .body_grid {
   overflow-x: hidden;
-  /* width: 100%;
-  height: 100vh; */
-
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   overflow-y: scroll;
@@ -31,6 +30,7 @@
 }
 .body {
   padding-top: 12vh;
+  height: 100%;
 }
 
 .sub_head {
