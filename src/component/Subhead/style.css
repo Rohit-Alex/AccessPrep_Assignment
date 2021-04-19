@@ -1,0 +1,7 @@
+.sub_head {
+  display: flex;
+  width: 92%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 7vh;
+}

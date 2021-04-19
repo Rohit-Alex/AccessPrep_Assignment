@@ -5,7 +5,6 @@
   padding: 20px 20px 40px 20px;
   height: 300px;
   width: 200px;
-
   transition: transform 450ms;
 }
 .card:hover {

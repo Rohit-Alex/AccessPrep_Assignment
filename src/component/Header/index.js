@@ -9,7 +9,7 @@ import WbSunnyIcon from "@material-ui/icons/WbSunny";
 import SearchIcon from "@material-ui/icons/Search";
 import debounce from "lodash.debounce";
 
-const Header = ({ mode, setMode, setsearchVal }) => {
+const Header = ({ mode, setMode, setsearchVal, setGrid }) => {
   const [inputVal, setInputVal] = useState("");
   const [show, setShow] = useState(false);
   const [view, setView] = useState("list");
@@ -33,6 +33,7 @@ const Header = ({ mode, setMode, setsearchVal }) => {
       setView("list");
       history.push("/");
     }
+    setGrid((prev) => !prev);
   };
 
   const handleToggle = () => {

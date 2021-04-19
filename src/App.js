@@ -1,14 +1,16 @@
-import { useState } from "react";
 import "./App.css";
 import Header from "./component/Header";
 import Item from "./component/Item";
 import Item1 from "./component/Item1";
 import data from "./bookApi.json";
-import Modal from "react-modal";
+
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 // import axios from "axios";
 // Modal.setAppElement("#root");
 import NoData from "./component/NoData";
+import Subhead from "./component/Subhead";
+import Popup from "./component/Popup";
+import { useState } from "react";
 function App() {
   const [searchVal, setsearchVal] = useState("");
   // const [obj, setObj] = useState([]);
@@ -16,6 +18,7 @@ function App() {
   const [mode, setMode] = useState("light");
   const [modalOpen, setModalOpen] = useState(false);
   const [curr, setCurr] = useState(null);
+  const [grid, setGrid] = useState(false);
   // useEffect(() => {
   //   async function getData() {
   //     try {
@@ -41,88 +44,46 @@ function App() {
   return (
     <div className={`${mode === "light" ? "App" : "App_Dark"}`}>
       <BrowserRouter>
-        <Header mode={mode} setMode={setMode} setsearchVal={setsearchVal} />
-        <Switch>
-          <Route exact path="/">
-            <div className="body">
-              <div className="head">
-                <h1>Book Details...</h1>
-              </div>
-              <div className="sub_head">
-                <h4 className="book_name">Books Title & Author</h4>
-                <h4 className="genre">Genre</h4>
-                <h4 className="reading_progress">Reading Progress</h4>
-                <h4 className="last_opened">Last Opened</h4>
-              </div>
-              <hr />
-              {filteredArray.length > 0 ? (
-                filteredArray.map((item) => (
-                  <div>
+        <Header
+          mode={mode}
+          setMode={setMode}
+          setsearchVal={setsearchVal}
+          setGrid={setGrid}
+        />
+        <div className="head">
+          <h1>Book Details...</h1>
+        </div>
+        <div className={`${!grid ? "body" : "body_grid"}`}>
+          {!grid && <Subhead />}
+          {filteredArray.length > 0 ? (
+            filteredArray.map((item) => (
+              <div>
+                <Switch>
+                  <Route exact path="/">
                     <Item
                       item={item}
                       setModalOpen={setModalOpen}
                       setCurr={setCurr}
-                    />{" "}
+                    />
                     <hr />
-                  </div>
-                ))
-              ) : (
-                <NoData />
-              )}
-            </div>
-          </Route>
-          <Route exact path="/grid">
-            <div className="con">
-              <div className="head_grid">
-                <h1>Book Details...</h1>
-              </div>
-              <div className="body_grid">
-                {filteredArray.length > 0 ? (
-                  filteredArray.map((item) => (
+                  </Route>
+                  <Route exact path="/grid">
                     <Item1
                       item={item}
                       setModalOpen={setModalOpen}
                       setCurr={setCurr}
                     />
-                  ))
-                ) : (
-                  <NoData />
-                )}
+                  </Route>
+                </Switch>
               </div>
-            </div>
-          </Route>
-        </Switch>
-        <Modal
-          isOpen={modalOpen}
-          onRequestClose={() => setModalOpen(false)}
-          style={{
-            overlay: {},
-            content: {
-              position: "absolute",
-              top: 100,
-              left: 300,
-              right: 300,
-              bottom: 100,
-              backgroundColor: "rgb(205 154 171)",
-            },
-          }}
-        >
-          <div className="modal_cont">
-            <h4>Book Title : </h4>
-            <div>{curr?.title}</div>
-            <h4>Author :</h4>
-            <div>{curr?.author}</div>
-            <h4>Description :</h4>
-            <div>{curr?.description}</div>
-          </div>
-          <br />
-          <button className="modal_btn" onClick={() => setModalOpen(false)}>
-            Close
-          </button>
-        </Modal>
+            ))
+          ) : (
+            <NoData />
+          )}
+        </div>
+        <Popup curr={curr} modalOpen={modalOpen} setModalOpen={setModalOpen} />
       </BrowserRouter>
     </div>
   );
 }
-
 export default App;
