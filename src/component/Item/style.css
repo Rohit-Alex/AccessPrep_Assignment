@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   width: 92%;
+  height:100vh;
   padding-bottom: 20px;
   transition: transform 450ms;
   padding: 20px 40px 20px 20px;
