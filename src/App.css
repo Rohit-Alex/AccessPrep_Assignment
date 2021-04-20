@@ -28,7 +28,7 @@
   display: none;
 }
 .body {
-  height: 100%;
+  height: 100vh;
 }
 
 .head {
