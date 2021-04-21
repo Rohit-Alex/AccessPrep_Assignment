@@ -1,4 +1,5 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -7,6 +8,7 @@
   background-color: white;
 }
 .App_Dark {
+  min-height: 100vh;
   color: rgb(252, 249, 249);
   background-color: rgb(5, 5, 5);
 }
@@ -32,7 +34,6 @@
 }
 
 .head {
-  height: 9vh;
   padding-top: 12vh;
   display: grid;
   place-items: center;
